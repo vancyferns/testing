@@ -1,0 +1,23 @@
+modules = ["nodejs-with-prybar-18", "python-with-prybar-3.10"]
+run = "npm start"
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "npm start"]
+
+[[ports]]
+localPort = 3000
+externalPort = 3000
+
+[[ports]]
+localPort = 3001
+externalPort = 3001
+
+[[ports]]
+localPort = 3002
+externalPort = 3002
+
+[[ports]]
+localPort = 8080
+externalPort = 80
